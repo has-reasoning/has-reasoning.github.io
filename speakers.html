@@ -3,27 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Speakers · Reasoning Workshop 2027</title>
-<meta name="description" content="Invited speakers for the 2027 Biosphere 2 workshop on reasoning as the basis for geo-scientific modeling in the age of AI.">
-<meta property="og:title" content="Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI">
-<meta property="og:description" content="Invited speakers for the 2027 Biosphere 2 workshop on reasoning as the basis for geo-scientific modeling in the age of AI.">
+<title>Invited Speakers · Reasoning Workshop 2027</title>
+<meta name="description" content="Invited speakers and scientific sessions for Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI, May 17–18, 2027, at Biosphere 2, Arizona.">
+<meta property="og:title" content="Invited Speakers · Reasoning Workshop 2027">
+<meta property="og:description" content="Scientific sessions and invited speakers for the May 17–18, 2027 workshop at Biosphere 2.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20260921b">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=20261021speakers">
+<style>
+/* Only the invited-speakers page uses this layout. */
+.speakers-editorial { padding-block: clamp(3rem, 6vw, 5.5rem); }
+.speakers-editorial .intro { color: var(--ink-soft); max-width: 67ch; font-size: 1.02rem; }
+.speakers-editorial .day { margin-top: clamp(3.5rem, 7vw, 5.5rem); }
+.speakers-editorial .day:first-of-type { margin-top: 3rem; }
+.speakers-editorial .day-head { border-bottom: 1px solid var(--ink); padding-bottom: 1.05rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.speakers-editorial .day-head h2 { font-size: clamp(1.85rem, 3.3vw, 2.7rem); font-weight: 500; margin: 0; }
+.speakers-editorial .day-head p { font-size: .84rem; color: var(--ink-soft); margin: 0; }
+.speakers-editorial .session { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); column-gap: clamp(2rem, 5vw, 5rem); padding-block: clamp(2rem, 4vw, 3rem); border-bottom: 1px solid var(--glass-edge); }
+.speakers-editorial .session__meta { font-family: var(--mono); font-size: .72rem; letter-spacing: .085em; color: var(--azurite); text-transform: uppercase; margin-bottom: .85rem; }
+.speakers-editorial .session__heading { font-size: clamp(1.45rem, 2.5vw, 2.08rem); line-height: 1.19; font-weight: 500; margin: 0; max-width: 26ch; }
+.speakers-editorial .speaker-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.55rem 2rem; margin: 0; padding: 0; list-style: none; align-content: start; }
+.speakers-editorial .speaker-list li { min-width: 0; }
+.speakers-editorial .speaker-name { font-family: var(--display); font-size: 1.24rem; font-weight: 500; line-height: 1.25; color: var(--ink); margin: 0 0 .2rem; }
+.speakers-editorial .speaker-affiliation { font-family: var(--body); font-size: .83rem; line-height: 1.45; color: var(--ink-soft); margin: 0; }
+.speakers-editorial .speaker-name--pending { font-family: var(--body); font-size: .92rem; font-weight: 400; font-style: italic; color: var(--ink-faint); }
+.speakers-editorial .special { margin-block: 2.3rem; padding: 1.5rem 0 1.5rem 1.4rem; border-left: 3px solid var(--mesa); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); column-gap: clamp(2rem, 5vw, 5rem); }
+.speakers-editorial .special .session__meta { color: var(--mesa-deep); }
+.speakers-editorial .special .session__heading { font-size: clamp(1.35rem, 2vw, 1.8rem); }
+.speakers-editorial .speaker-list--special { grid-template-columns: 1fr; }
+.speakers-editorial .final-note { font-size: .83rem; color: var(--ink-soft); margin-top: 2.1rem; }
+@media (max-width: 820px) {
+  .speakers-editorial .session, .speakers-editorial .special { grid-template-columns: 1fr; gap: 1.7rem; }
+  .speakers-editorial .day-head { align-items: flex-start; flex-direction: column; gap: .2rem; }
+}
+@media (max-width: 520px) {
+  .speakers-editorial .speaker-list { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+</style>
 <script>document.documentElement.className += " js";</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-  <header class="masthead">
-    <div class="wrap masthead__inner">
-      <a class="brand" href="index.html">
-        <b>Reasoning &amp; Geo-Scientific Modeling</b>
-        <span>Biosphere 2 &middot; May 15–19, 2027</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-      <nav class="nav" id="primary-nav" aria-label="Primary">
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="brand" href="index.html">
+      <b>Reasoning &amp; Geo-Scientific Modeling</b>
+      <span>Biosphere 2 &middot; May 15–19, 2027</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
       <a href="theme.html">Theme</a>
       <a href="program.html">Program</a>
       <a href="speakers.html" aria-current="page">Speakers</a>
@@ -31,241 +61,146 @@
       <a href="register.html">Registration</a>
       <a href="flyer.html">Flyer</a>
       <a href="organizers.html">Organizers</a>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
+    </nav>
+  </div>
+</header>
+<main id="main">
   <section class="hero hero--plain">
     <div class="hero__frame" aria-hidden="true"></div>
-    <svg class="hero__truss" aria-hidden="true" focusable="false">
-  <defs>
-    <pattern id="truss" width="120" height="104" patternUnits="userSpaceOnUse">
-      <path d="M0 104 L60 0 L120 104 Z M60 0 L60 104 M0 104 L120 104 M-60 0 L0 104 M120 104 L180 0"
-            fill="none" stroke="#81D3EB" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#truss)"/>
-</svg>
-    <img class="hero__mark" src="assets/img/workshop-logo.webp" width="410" height="410"
-         decoding="async" alt="" aria-hidden="true">
+    <img class="hero__mark" src="assets/img/workshop-logo.webp" width="410" height="410" decoding="async" alt="" aria-hidden="true">
     <div class="wrap hero__inner" style="padding-block:clamp(3rem,7vw,4.5rem) clamp(2.25rem,5vw,3rem)">
       <h1 style="font-size:clamp(2rem,4.2vw,3.2rem);max-width:20ch">Invited speakers</h1>
-  
+      <p class="hero__sub" style="font-size:clamp(1rem,1.7vw,1.2rem)">Four scientific sessions across May 17–18, 2027, at Biosphere 2.</p>
     </div>
   </section>
-  <section class="section">
+  <section class="speakers-editorial">
     <div class="wrap">
-    <section class="sess-block s-models reveal">
-      <div class="sess-block__head">
-        <p class="sess-block__when">Monday, May 17 &middot; Morning</p>
-        <h2>Models as Support for Understanding, Reasoning &amp; Discovery</h2>
-        <p style="color:var(--ink-soft);font-size:.95rem">How models earn their place as instruments of understanding rather than prediction machines &mdash; and what misspecification, diagnostics and process reasoning demand of them.</p>
-      </div>
-      <div class="people">
-        <article class="person">
-          <p class="person__role">Keynote </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Dealing with misspecification</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning &middot; bridging process-based and machine learning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning</p>
-        </article>
-      </div>
-    </section>
-    <section class="sess-block s-reflect reveal">
-      <div class="sess-block__head">
-        <p class="sess-block__when">Monday, May 17 &middot; Afternoon</p>
-        <h2>The Learning Problem &mdash; Reflections on Four Decades of Systems Theory</h2>
-        <p style="color:var(--ink-soft);font-size:.95rem">A long view of what systems theory taught hydrology about learning from data, from the people who did the work.</p>
-      </div>
-      <div class="people">
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Reflections</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Reflections</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Reflections</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Reflections</p>
-        </article>
-      </div>
-    </section>
-    <section class="sess-block s-hvg reveal">
-      <div class="sess-block__head">
-        <p class="sess-block__when">Monday, May 17 &middot; Late afternoon</p>
-        <h2>The Learning Problem &mdash; An Information-Theoretic Perspective on the Future</h2>
-        <p style="color:var(--ink-soft);font-size:.95rem">The honoree&rsquo;s own account of where the learning problem goes next.</p>
-      </div>
-      <div class="people">
-        <article class="person">
-          <p class="person__role">Invited presentation <span class="badge badge--invited">Honoree</span></p>
-          <h3 class="person__name">Hoshin V. Gupta</h3>
-          <p class="person__affil">University of Arizona</p>
-          <p class="person__topic">Information theory and the future of the learning problem</p>
-        </article>
-      </div>
-    </section>
-    <section class="sess-block s-models reveal">
-      <div class="sess-block__head">
-        <p class="sess-block__when">Tuesday, May 18 &middot; Morning</p>
-        <h2>Models as Support for Understanding, Reasoning &amp; Discovery</h2>
-        <p style="color:var(--ink-soft);font-size:.95rem">The session continues, with a focus on bridging process-based modeling and machine learning in practice.</p>
-      </div>
-      <div class="people">
-        <article class="person">
-          <p class="person__role">Keynote </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning &middot; bridging process-based and machine learning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Models and reasoning &middot; bridging process-based and machine learning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Bridging process-based and machine learning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Bridging process-based and machine learning</p>
-        </article>
-      </div>
-    </section>
-    <section class="sess-block s-future reveal">
-      <div class="sess-block__head">
-        <p class="sess-block__when">Tuesday, May 18 &middot; Afternoon</p>
-        <h2>The Learning Problem &mdash; Looking to the Future</h2>
-        <p style="color:var(--ink-soft);font-size:.95rem">Equation discovery, new architectures, causality and agentic methods &mdash; what the next decade of geo-scientific model development might actually look like.</p>
-      </div>
-      <div class="people">
-        <article class="person">
-          <p class="person__role">Keynote </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Equation generation</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Kolmogorov–Arnold networks &middot; NEAT</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Latent representation &middot; contrastive learning</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Agentic support for model development</p>
-        </article>
-        <article class="person">
-          <p class="person__role">Talk </p>
-          <h3 class="person__name">TBD</h3>
-          <p class="person__affil">TBD</p>
-          <p class="person__topic">Information theory &middot; causality &middot; agentic methods</p>
-        </article>
-      </div>
-    </section>
-    </div>
-  </section>
+      <p class="intro">The workshop brings together researchers working across physical modeling, systems theory, and artificial intelligence. Speakers are grouped by scientific session; individual presentation titles will follow.</p>
 
-  </main>
-  <section class="hosts">
-    <div class="wrap hosts__inner">
-      <div class="hosts__item">
-        <p class="hosts__k">Hosted by</p>
-        <img class="hosts__has" src="assets/img/has-lockup.png" width="1216" height="235"
-             loading="lazy" decoding="async"
-             alt="University of Arizona College of Science, Department of Hydrology and Atmospheric Sciences.">
+      <div class="day">
+        <header class="day-head">
+          <h2>Monday, May 17</h2>
+          <p>Biosphere 2</p>
+        </header>
+
+        <section class="session" aria-labelledby="session-a">
+          <div>
+            <p class="session__meta">Morning &middot; 09:00–12:00</p>
+            <h3 class="session__heading" id="session-a">Models as Support for Understanding, Reasoning &amp; Discovery</h3>
+          </div>
+          <ul class="speaker-list" aria-label="Monday morning speakers">
+            <li><p class="speaker-name">Thorsten Wagener</p><p class="speaker-affiliation">University of Potsdam, Germany</p></li>
+            <li><p class="speaker-name">Jasper Vrugt</p><p class="speaker-affiliation">University of California, Irvine</p></li>
+            <li><p class="speaker-name">Gab Abramowitz</p><p class="speaker-affiliation">UNSW, Australia</p></li>
+            <li><p class="speaker-name">Uwe Ehret</p><p class="speaker-affiliation">Karlsruhe Institute of Technology, Germany</p></li>
+            <li><p class="speaker-name speaker-name--pending">To be confirmed</p></li>
+          </ul>
+        </section>
+
+        <section class="session" aria-labelledby="session-b">
+          <div>
+            <p class="session__meta">Afternoon &middot; 14:00–16:30</p>
+            <h3 class="session__heading" id="session-b">The Learning Problem — Reflections on Four Decades of Systems Theory</h3>
+          </div>
+          <ul class="speaker-list" aria-label="Monday afternoon speakers">
+            <li><p class="speaker-name">Kuolin Hsu</p><p class="speaker-affiliation">University of California, Irvine</p></li>
+            <li><p class="speaker-name">Harald Kling</p><p class="speaker-affiliation">Austria</p></li>
+            <li><p class="speaker-name">Grey Nearing</p><p class="speaker-affiliation">Google</p></li>
+            <li><p class="speaker-name speaker-name--pending">To be confirmed</p></li>
+          </ul>
+        </section>
+
+        <aside class="special" aria-labelledby="hoshin-session">
+          <div>
+            <p class="session__meta">Special presentation &middot; 16:30–17:30</p>
+            <h3 class="session__heading" id="hoshin-session">The Learning Problem — An Information-Theoretic Perspective on the Future</h3>
+          </div>
+          <ul class="speaker-list speaker-list--special">
+            <li><p class="speaker-name">Hoshin V. Gupta</p><p class="speaker-affiliation">University of Arizona · Honoree</p></li>
+          </ul>
+        </aside>
       </div>
-      <div class="hosts__item">
-        <p class="hosts__k">Held at</p>
-        <img class="hosts__b2" src="assets/img/b2-logo.png" width="273" height="168"
-             loading="lazy" decoding="async" alt="Biosphere 2, The University of Arizona.">
+
+      <div class="day">
+        <header class="day-head">
+          <h2>Tuesday, May 18</h2>
+          <p>Biosphere 2</p>
+        </header>
+
+        <section class="session" aria-labelledby="session-c">
+          <div>
+            <p class="session__meta">Morning &middot; 09:00–12:00</p>
+            <h3 class="session__heading" id="session-c">Models as Support for Understanding, Reasoning &amp; Discovery</h3>
+          </div>
+          <ul class="speaker-list" aria-label="Tuesday morning speakers">
+            <li><p class="speaker-name">Martyn Clark</p><p class="speaker-affiliation">University of Calgary</p></li>
+            <li><p class="speaker-name">Jonathan Frame</p><p class="speaker-affiliation">University of Alabama</p></li>
+            <li><p class="speaker-name">Andrew Bennett</p><p class="speaker-affiliation">University of Arizona</p></li>
+            <li><p class="speaker-name">Laura Condon</p><p class="speaker-affiliation">University of Arizona</p></li>
+            <li><p class="speaker-name">Bo Guo</p><p class="speaker-affiliation">University of Arizona</p></li>
+          </ul>
+        </section>
+
+        <section class="session" aria-labelledby="session-d">
+          <div>
+            <p class="session__meta">Afternoon &middot; 14:00–17:30</p>
+            <h3 class="session__heading" id="session-d">The Learning Problem — Looking to the Future</h3>
+          </div>
+          <ul class="speaker-list" aria-label="Tuesday afternoon speakers">
+            <li><p class="speaker-name">Karsten Schulz</p><p class="speaker-affiliation">BOKU, Austria</p></li>
+            <li><p class="speaker-name">Hernan Moreno</p><p class="speaker-affiliation">University of Texas at El Paso</p></li>
+            <li><p class="speaker-name">Yang Yang</p><p class="speaker-affiliation">University of Massachusetts Boston</p></li>
+            <li><p class="speaker-name">Yang Hong</p><p class="speaker-affiliation">University of Oklahoma</p></li>
+            <li><p class="speaker-name">Praveen Kumar</p><p class="speaker-affiliation">University of Illinois</p></li>
+          </ul>
+        </section>
       </div>
+      <p class="final-note">Speaker lineup and presentation details are subject to updates. See the <a href="program.html">full program</a> for session times, poster sessions, and other workshop activities.</p>
     </div>
   </section>
-  <footer class="foot">
-    <div class="wrap">
-      <div class="foot__grid">
-        <div>
-          <h4>The workshop</h4>
-          <p style="color:var(--on-dark);margin:0 0 .5rem">Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI</p>
-          <p style="margin:0">May 15–19, 2027<br>Biosphere 2, Oracle, Arizona</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul><li><a href="theme.html">Theme</a></li><li><a href="program.html">Program</a></li><li><a href="speakers.html">Speakers</a></li><li><a href="venue.html">Venue &amp; Travel</a></li><li><a href="register.html">Registration</a></li><li><a href="organizers.html">Organizers</a></li></ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:has-reasoning@arizona.edu">has-reasoning@arizona.edu</a></li>
-            <li>Department of Hydrology<br>&amp; Atmospheric Sciences</li>
-            <li>University of Arizona</li>
-          </ul>
-        </div>
+</main>
+<section class="hosts">
+  <div class="wrap hosts__inner">
+    <div class="hosts__item">
+      <p class="hosts__k">Hosted by</p>
+      <img class="hosts__has" src="assets/img/has-lockup.png" width="1216" height="235" loading="lazy" decoding="async" alt="University of Arizona College of Science, Department of Hydrology and Atmospheric Sciences.">
+    </div>
+    <div class="hosts__item">
+      <p class="hosts__k">Held at</p>
+      <img class="hosts__b2" src="assets/img/b2-logo.png" width="273" height="168" loading="lazy" decoding="async" alt="Biosphere 2, The University of Arizona.">
+    </div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <p style="color:var(--on-dark);margin:0 0 .5rem">Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI</p>
+        <p style="margin:0">May 15–19, 2027<br>Biosphere 2, Oracle, Arizona</p>
       </div>
-      <div class="foot__base">
-        <p>Hosted by the Department of Hydrology &amp; Atmospheric Sciences, University of Arizona.</p>
-        <p>In honor of Professor Hoshin V. Gupta.</p>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="theme.html">Theme</a></li>
+          <li><a href="program.html">Program</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="venue.html">Venue &amp; Travel</a></li>
+          <li><a href="register.html">Registration</a></li>
+          <li><a href="flyer.html">Flyer</a></li>
+          <li><a href="organizers.html">Organizers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="mailto:has-reasoning@arizona.edu">has-reasoning@arizona.edu</a></li>>
       </div>
     </div>
-  </footer>
-  <script src="assets/js/site.js"></script>
+    <div class="foot__base">
+      <p>Hosted by the Department of Hydrology &amp; Atmospheric Sciences, University of Arizona.</p>
+      <p>In honor of Professor Hoshin V. Gupta.</p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
 </body>
 </html>
