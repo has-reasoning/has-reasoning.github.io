@@ -898,3 +898,53 @@ h1, h2, h3, h4 {
 }
 
 
+/* Editorial registration information */
+
+.registration-details h2 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 2.5rem;
+}
+
+.registration-details__row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.7rem 0;
+  border-top: 1px solid var(--glass-edge);
+}
+
+.registration-details__row:last-child {
+  border-bottom: 1px solid var(--glass-edge);
+}
+
+.registration-details__label {
+  font-family: var(--body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--azurite);
+}
+
+.registration-details__row h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.registration-details__row p {
+  line-height: 1.65;
+  max-width: 58ch;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 650px) {
+  .registration-details__row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+
+
