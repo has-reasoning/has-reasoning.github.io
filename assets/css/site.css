@@ -833,3 +833,57 @@ h1, h2, h3, h4 {
 }
 
 
+/* Faculty committee — equal-size editorial portraits */
+
+.roster--faculty {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  background: transparent;
+  border: none;
+}
+
+.roster--faculty .roster__cell {
+  padding: 0;
+  background: transparent;
+  min-width: 0;
+}
+
+.roster--faculty .roster__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: center 30%;
+  margin-bottom: 14px;
+}
+
+.roster--faculty h3 {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.roster--faculty p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .roster--faculty {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .roster--faculty {
+    gap: 16px;
+  }
+}
+
+
+
