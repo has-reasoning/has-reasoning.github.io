@@ -784,3 +784,22 @@ figure figcaption { font-size: .84rem; color: var(--ink-soft); margin-top: .7rem
   .slot { break-inside: avoid; }
   a { color: inherit; text-decoration: none; }
 }
+
+/* Workshop logo on homepage */
+.hero--home .hero__logo {
+  position: absolute;
+  top: 45px;
+  right: 6%;
+  width: clamp(140px, 15vw, 210px);
+  height: auto;
+  z-index: 2;
+  opacity: 0.95;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.3));
+}
+
+/* Avoid overlapping text on smaller screens */
+@media (max-width: 860px) {
+  .hero--home .hero__logo {
+    display: none;
+  }
+}
