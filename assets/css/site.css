@@ -947,4 +947,32 @@ h1, h2, h3, h4 {
 }
 
 
+/* General Theme — editorial article typography */
+
+.theme-essay .wrap {
+  max-width: 850px;
+}
+
+.theme-essay p:not(.eyebrow) {
+  font-family: var(--body);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+  color: var(--ink);
+  max-width: 70ch;
+  margin-bottom: 1.5rem;
+}
+
+.theme-essay .eyebrow {
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 600px) {
+  .theme-essay p:not(.eyebrow) {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+
 
