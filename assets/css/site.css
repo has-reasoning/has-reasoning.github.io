@@ -803,3 +803,15 @@ figure figcaption { font-size: .84rem; color: var(--ink-soft); margin-top: .7rem
     display: none;
   }
 }
+
+
+/* Hide workshop title in the header */
+.masthead .brand {
+  display: none;
+}
+
+/* Keep navigation aligned to the right */
+.masthead__inner {
+  justify-content: flex-end;
+}
+
