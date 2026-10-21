@@ -13,6 +13,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/site.css?v=20260921b">
 <script>document.documentElement.className += " js";</script>
+  
+<style>
+  /* Hide schedule duration bars */
+  .day .bar {
+    display: none;
+  }
+
+  /* Adjust spacing above the schedule note */
+  .section .note {
+    margin-top: 0 !important;
+  }
+</style>
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -54,15 +67,6 @@
   </section>
   <section class="section section--tight">
     <div class="wrap">
-      <div class="legend">
-        <span class="legend__item"><span class="legend__swatch"></span> Presenting time</span>
-        <span class="legend__item"><span class="legend__swatch legend__swatch--qa"></span> Discussion / Q&amp;A</span>
-        <span class="legend__item">Bars are drawn to scale &mdash; length is real minutes.</span>
-      </div>
-      <div class="note" style="margin:-1rem 0 2.5rem">
-        Program subject to change. Session titles and timings are settled; individual
-        speakers are assigned to slots as the program is finalised.
-      </div>
     <section class="day">
       <div class="day__head">
         <span class="day__date">Saturday, May 15</span>
