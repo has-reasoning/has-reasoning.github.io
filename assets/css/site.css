@@ -1251,3 +1251,31 @@ h1, h2, h3, h4 {
   }
 }
 
+
+/* Homepage background — refined editorial version */
+
+.home-page .hero--home .hero__media {
+  background-image: url("../img/hero-symposium-v2.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+/* The new background already has a navy gradient */
+.home-page .hero--home .hero__frame {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 24, 59, 0.20),
+      transparent 75%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 20, 52, 0.25),
+      transparent 55%
+    );
+}
+
+/* Remove the oversized triangular SVG overlay */
+.home-page .hero--home .hero__truss--home {
+  display: none !important;
+}
