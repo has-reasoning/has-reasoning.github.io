@@ -233,7 +233,7 @@ a:hover { color: var(--mesa-deep); }
 /* Declared here, not via a custom property set in an inline style: url() inside
    a custom property is resolved relative to the stylesheet that consumes the
    var(), which silently rewrote this path to assets/css/assets/img/... */
-.hero--home .hero__media { background-image: url("../img/hero-biosphere2.jpg"); }
+.hero--home .hero__media { background-image: url("../img/B2indexpng.png"); }
 /* Fallback atmosphere when no photograph is present: the B2 space-frame */
 .hero__frame {
   position: absolute; inset: 0; z-index: -1;
