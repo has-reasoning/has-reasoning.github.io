@@ -40,6 +40,32 @@
   <section class="hero hero--home">
     <div class="hero__media" aria-hidden="true"></div>
     <div class="hero__frame" aria-hidden="true"></div>
+    
+<!-- Subtle geometric pattern in lower-left hero -->
+<svg class="hero__truss hero__truss--home"
+     viewBox="0 0 600 500"
+     preserveAspectRatio="xMinYMax slice"
+     aria-hidden="true"
+     focusable="false">
+  <defs>
+    <pattern id="home-triangle-grid"
+             width="120"
+             height="104"
+             patternUnits="userSpaceOnUse">
+      <path
+        d="M0 104 L60 0 L120 104 Z
+           M60 0 L60 104
+           M0 104 L120 104"
+        fill="none"
+        stroke="#58A8D0"
+        stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="600"
+        height="500"
+        fill="url(#home-triangle-grid)"/>
+</svg>
+
   
     <img class="hero__logo"
          src="assets/img/workshop-logo.webp"
