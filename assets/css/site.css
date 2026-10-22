@@ -1218,3 +1218,36 @@ h1, h2, h3, h4 {
 }
 
 
+/* Geometric pattern — homepage lower-left */
+
+.home-page .hero--home .hero__truss--home {
+  position: absolute;
+  inset: auto auto 0 0;
+
+  width: min(43vw, 640px);
+  height: min(75%, 600px);
+
+  z-index: 1;
+  opacity: 0.35;
+  pointer-events: none;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at bottom left,
+    black 15%,
+    transparent 80%
+  );
+
+  mask-image: radial-gradient(
+    ellipse at bottom left,
+    black 15%,
+    transparent 80%
+  );
+}
+
+@media (max-width: 700px) {
+  .home-page .hero--home .hero__truss--home {
+    width: 70vw;
+    opacity: 0.18;
+  }
+}
+
