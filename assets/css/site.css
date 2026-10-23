@@ -1252,7 +1252,8 @@ h1, h2, h3, h4 {
 }
 
 
-/* Homepage background — refined editorial version */
+
+/* Homepage background — final editorial treatment */
 
 .home-page .hero--home .hero__media {
   background-image: url("../img/B2indexpng.png");
@@ -1260,22 +1261,52 @@ h1, h2, h3, h4 {
   background-size: cover;
 }
 
-/* The new background already has a navy gradient */
+/* Strong navy on the left, clear architecture on the right */
 .home-page .hero--home .hero__frame {
   background:
     linear-gradient(
       90deg,
-      rgba(0, 24, 59, 0.20),
-      transparent 75%
+      rgba(0, 24, 59, 0.88) 0%,
+      rgba(0, 24, 59, 0.75) 32%,
+      rgba(0, 24, 59, 0.38) 60%,
+      rgba(0, 24, 59, 0.05) 100%
     ),
     linear-gradient(
       0deg,
-      rgba(0, 20, 52, 0.25),
-      transparent 55%
+      rgba(0, 17, 48, 0.90) 0%,
+      rgba(0, 17, 48, 0.55) 27%,
+      rgba(0, 17, 48, 0.12) 65%,
+      transparent 100%
     );
 }
 
-/* Remove the oversized triangular SVG overlay */
+/* Subtle geometric pattern in the lower-left */
 .home-page .hero--home .hero__truss--home {
-  display: none !important;
+  display: block !important;
+  position: absolute;
+  inset: auto auto 0 0;
+  width: min(38vw, 620px);
+  height: min(75%, 620px);
+  z-index: 1;
+  opacity: 0.32;
+  pointer-events: none;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse at bottom left,
+    black 15%,
+    transparent 85%
+  );
+
+  mask-image: radial-gradient(
+    ellipse at bottom left,
+    black 15%,
+    transparent 85%
+  );
+}
+
+@media (max-width: 700px) {
+  .home-page .hero--home .hero__truss--home {
+    width: 70vw;
+    opacity: 0.18;
+  }
 }
