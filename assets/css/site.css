@@ -1311,42 +1311,58 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Dark extension section on homepage */
-.section--dark {
-  background: #07254d;
-  color: #eef4fb;
+
+/* Dark homepage sections */
+
+.home-page .section--dark {
+  background: #061F43;
+  color: #EDF4FA;
   border-top: 0;
 }
 
-.section--dark h2,
-.section--dark h3,
-.section--dark .lede,
-.section--dark p,
-.section--dark li {
-  color: #eef4fb;
+.home-page .section--dark + .section--dark {
+  border-top: 1px solid rgba(129,211,235,0.15);
 }
 
-.section--dark .eyebrow {
-  color: #7fc8ee;
+.home-page .section--dark .lede,
+.home-page .section--dark h2 {
+  color: #F5F8FC;
 }
 
-.section--dark .eyebrow::after,
-.section--dark .eyebrow-line {
-  border-color: rgba(127, 200, 238, 0.35);
+.home-page .section--dark .eyebrow {
+  color: #81D3EB;
 }
 
-.section--dark a {
-  color: #9edcff;
+.home-page .section--dark .eyebrow::after {
+  background: rgba(129,211,235,0.35);
 }
 
-.section--dark .btn,
-.section--dark .btn-ghost {
-  border-color: rgba(255,255,255,0.35);
-  color: #eef4fb;
+/* Motivation link */
+.home-page .section--dark .btn--light {
+  color: #EDF4FA;
   background: transparent;
+  border-color: rgba(255,255,255,0.4);
 }
 
-.section--dark .btn:hover,
-.section--dark .btn-ghost:hover {
-  background: rgba(255,255,255,0.08);
+.home-page .section--dark .btn--light:hover {
+  background: rgba(255,255,255,0.1);
+  color: #FFFFFF;
+}
+
+/* Program cards on the dark background */
+.home-page .section--dark .card {
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(129,211,235,0.22);
+}
+
+.home-page .section--dark .card h3 {
+  color: #FFFFFF;
+}
+
+.home-page .section--dark .card p {
+  color: #C4D5E5;
+}
+
+.home-page .section--dark .card__tag {
+  color: #81D3EB;
 }
