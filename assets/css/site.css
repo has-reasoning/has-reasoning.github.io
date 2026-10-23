@@ -1310,3 +1310,43 @@ h1, h2, h3, h4 {
     opacity: 0.18;
   }
 }
+
+/* Dark extension section on homepage */
+.section--dark {
+  background: #07254d;
+  color: #eef4fb;
+  border-top: 0;
+}
+
+.section--dark h2,
+.section--dark h3,
+.section--dark .lede,
+.section--dark p,
+.section--dark li {
+  color: #eef4fb;
+}
+
+.section--dark .eyebrow {
+  color: #7fc8ee;
+}
+
+.section--dark .eyebrow::after,
+.section--dark .eyebrow-line {
+  border-color: rgba(127, 200, 238, 0.35);
+}
+
+.section--dark a {
+  color: #9edcff;
+}
+
+.section--dark .btn,
+.section--dark .btn-ghost {
+  border-color: rgba(255,255,255,0.35);
+  color: #eef4fb;
+  background: transparent;
+}
+
+.section--dark .btn:hover,
+.section--dark .btn-ghost:hover {
+  background: rgba(255,255,255,0.08);
+}
