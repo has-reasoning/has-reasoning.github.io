@@ -3,424 +3,556 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Program · Reasoning symposium 2027</title>
-<meta name="description" content="Full schedule for the 2027 Biosphere 2 symposium, May 15–19, with session timings drawn to scale.">
-<meta property="og:title" content="Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI">
-<meta property="og:description" content="Full schedule for the 2027 Biosphere 2 symposium, May 15–19, with session timings drawn to scale.">
+<title>Program · Reasoning Symposium 2027</title>
+<meta name="description" content="Browse the five-day program and invited-speaker sessions for the Reasoning Symposium at Biosphere 2, May 15–19, 2027.">
+<meta property="og:title" content="Program · Reasoning Symposium 2027">
+<meta property="og:description" content="Scientific sessions, invited speakers and daily events at Biosphere 2, May 15–19, 2027.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=20260921b">
-<script>document.documentElement.className += " js";</script>
-  
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=20261112">
 <style>
-  /* Hide schedule duration bars */
-  .day .bar {
-    display: none;
-  }
+/* Interactive scientific program. Page-scoped; no changes to site.css required. */
+body.program-interactive, .program-interactive main { background: #fff; }
+.program-interactive .pi-hero {
+  background: #f8fafb;
+  border-bottom: 1px solid #d9e2e9;
+  padding: clamp(3.3rem, 7vw, 5.7rem) 0 clamp(2.7rem, 5vw, 4rem);
+}
+.pi-hero__inner { max-width: 1100px; }
+.pi-hero__eyebrow {
+  margin: 0 0 .8rem; color: #376488; font: 500 .71rem/1.6 var(--body);
+  text-transform: uppercase; letter-spacing: .14em;
+}
+.pi-hero h1 {
+  font: 400 clamp(3.3rem, 7vw, 6rem)/1.07 var(--display);
+  letter-spacing: -.047em; color: #001c48; margin: 0 0 1.15rem;
+}
+.pi-hero__subtitle {
+  max-width: 65ch; color: #3f5368; font: 400 clamp(1.05rem,1.8vw,1.3rem)/1.6 var(--display);
+  margin-bottom: 1.7rem;
+}
+.pi-hero__facts { display:flex; flex-wrap:wrap; gap:.45rem 2rem; align-items:center; }
+.pi-hero__facts span { font: 500 .85rem/1.6 var(--body); color:#253d56; }
+.pi-hero__facts span + span:before { content: "·"; color:#8c9faf; margin-right:2rem; }
 
-  /* Adjust spacing above the schedule note */
-  .section .note {
-    margin-top: 0 !important;
-  }
+/* Five date stops are a timeline, not cards or a pagination widget. */
+.pi-timeline {
+  position: sticky; top:64px; z-index:35; background:rgba(255,255,255,.98);
+  border-bottom:1px solid #d9e2e9;
+  box-shadow: 0 8px 18px rgba(18,45,74,.025);
+}
+.pi-timeline__container { max-width:1100px; }
+.pi-timeline__rail { position:relative; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); }
+.pi-timeline__rail::before {
+  content:""; position:absolute; left:10%; right:10%; top:20px;
+  height:1px; background:#cad7e1; pointer-events:none;
+}
+.pi-day-link {
+  position:relative; display:flex; flex-direction:column; align-items:center;
+  text-align:center; text-decoration:none; color:#52677b; padding:13px 5px 14px;
+  outline-offset:-3px; transition:color .15s;
+}
+.pi-day-link:hover { color:#001c48; }
+.pi-day-link__dot {
+  position:relative; display:block; width:15px; height:15px; margin:0 0 12px;
+  background:#fff; border:1.5px solid #9aafc2; border-radius:50%; z-index:1;
+  transition: background .15s, border-color .15s;
+}
+.pi-day-link.is-current .pi-day-link__dot { background:#001c48; border-color:#001c48; box-shadow:0 0 0 4px #fff; }
+.pi-day-link__date { font:500 .86rem/1.25 var(--body); letter-spacing:.005em; color:inherit; }
+.pi-day-link__sub { font:400 .74rem/1.5 var(--body); color:#8191a1; margin-top:2px; }
+.pi-day-link.is-current { color:#001c48; }
+.pi-day-link.is-current .pi-day-link__date { font-weight:600; }
+.pi-day-link.is-current .pi-day-link__sub { color:#376488; }
+.pi-day-link.is-current:after {
+  position:absolute; content:""; height:2px; background:#001c48; bottom:0; left:18%; right:18%;
+}
+
+.pi-main { padding:clamp(2.7rem, 5vw, 4rem) 0 5rem; }
+.pi-main__inner {max-width:1100px;}
+.pi-annotation {
+  display:flex; justify-content:space-between; flex-wrap:wrap; align-items:baseline;
+  gap:.35rem 1.5rem; border-bottom:1px solid #d9e2e9;
+  padding-bottom:1.1rem; margin-bottom:clamp(2.2rem,4vw,3.7rem); scroll-margin-top:180px;
+}
+.pi-annotation p { margin:0; max-width:none; font:400 .8rem/1.65 var(--body); color:#64778a; }
+.pi-annotation a { font-size:.81rem; color:#27547f; text-decoration-color:#bccbda; }
+.pi-day { scroll-margin-top:175px; }
+/* Without JS every day is present and anchor navigable. */
+.program-enhanced .pi-day:not(.is-current) { display:none; }
+.pi-day__head {
+  display:grid; grid-template-columns:125px minmax(0,1fr); gap:clamp(1.2rem,4vw,3.8rem);
+  align-items:start; margin-bottom:2.6rem;
+}
+.pi-day__calendar { border-right:1px solid #dae3eb; padding-right:1.4rem; }
+.pi-day__week { display:block; text-transform:uppercase; letter-spacing:.09em; font:500 .69rem/1.4 var(--body); color:#376488; }
+.pi-day__num { display:block; font:400 clamp(3.8rem,6vw,5.35rem)/1.1 var(--display); letter-spacing:-.055em; color:#001c48; margin:.1rem 0 -.12rem; }
+.pi-day__month { font:400 .75rem/1.35 var(--body); color:#698096; }
+.pi-day__intro { padding-top:.2rem; }
+.pi-day__intro h2 {font:400 clamp(1.8rem,3.5vw,2.75rem)/1.16 var(--display); letter-spacing:-.025em; margin:0 0 .5rem; color:#001c48; }
+.pi-day__place { margin:0; color:#64778a; font-size:.92rem; }
+.pi-day__intro-kicker { margin:0 0 .45rem; font:500 .7rem/1.5 var(--body); letter-spacing:.11em; text-transform:uppercase; color:#376488; }
+
+/* One continuous agenda axis for each day's programme. */
+.pi-agenda { margin:0; padding:0; list-style:none; }
+.pi-agenda__item {
+  display:grid; grid-template-columns:125px 22px minmax(0,1fr);
+  gap:clamp(.75rem, 2.4vw, 1.65rem); position:relative;
+}
+.pi-agenda__time {
+  font:500 .8rem/1.5 var(--body); font-variant-numeric:tabular-nums;
+  color:#314c66; white-space:nowrap; padding-top:1.3rem;
+}
+.pi-agenda__track { position:relative; }
+.pi-agenda__track:before { content:""; position:absolute; left:50%; top:0; bottom:0; width:1px; background:#dce5ec; transform:translateX(-50%); }
+.pi-agenda__track:after {
+  content:""; position:absolute; z-index:1; left:50%; top:1.65rem; width:7px; height:7px;
+  background:white; border:1.5px solid #8ca2b6; border-radius:50%; transform:translateX(-50%);
+}
+.pi-agenda__item:first-child .pi-agenda__track:before { top:1.65rem; }
+.pi-agenda__item:last-child .pi-agenda__track:before { bottom:calc(100% - 1.65rem); }
+.pi-agenda__body { min-width:0; padding:1.05rem 0 1.3rem; border-top:1px solid #e5ebf0; }
+.pi-agenda__item:first-child .pi-agenda__body { border-top:1px solid #e5ebf0; }
+.pi-simple__title { color:#19324a; font:500 1rem/1.55 var(--body); margin:0; }
+.pi-simple__note { color:#728397; margin:.23rem 0 0; font-size:.84rem; }
+.pi-agenda__item--muted .pi-simple__title { font-weight:400; color:#718295; }
+.pi-agenda__item--poster .pi-simple__title { color:#27547f; }
+.pi-agenda__item--special .pi-simple__title { color:#744431; }
+
+/* Scientific sessions are structured like a conference booklet spread. */
+.pi-agenda__item--session .pi-agenda__track:after { width:9px;height:9px; top:1.55rem; border-color:#001c48; background:#001c48; }
+.pi-session { padding:1.3rem 1.5rem 1.5rem; background:#f7f9fb; border-top:1px solid #aabed0; }
+.pi-session__number { color:#376488; text-transform:uppercase; letter-spacing:.1em; font:500 .69rem/1.4 var(--body); margin:0 0 .6rem; }
+.pi-session h3 {font:400 clamp(1.4rem,2.4vw,1.9rem)/1.22 var(--display); letter-spacing:-.015em; color:#001c48; max-width:38ch; margin:0 0 1.7rem; }
+.pi-session__cols {display:grid; grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr); gap:clamp(1.2rem,3vw,2.3rem);}
+.pi-session h4 {font:600 .7rem/1.5 var(--body); color:#637b90; letter-spacing:.09em; text-transform:uppercase; margin:0 0 .85rem;}
+.pi-sequence {margin:0; padding:0; list-style:none;}
+.pi-sequence li {display:grid; grid-template-columns:110px minmax(0,1fr); gap:.65rem; padding:.44rem 0; border-top:1px solid #dde6ed;}
+.pi-sequence__time { color:#4b6379; font-size:.78rem; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.pi-sequence__title {font-size:.87rem; font-weight:500; color:#20374d;}
+.pi-sequence li.is-break .pi-sequence__title {font-weight:400; color:#8695a4;}
+.pi-session__speakers { border-left:1px solid #dae3eb; padding-left:clamp(1.15rem,2.5vw,2rem); }
+.pi-people {margin:0; padding:0; list-style:none; display:grid; gap:.8rem;}
+.pi-people li {line-height:1.35;}
+.pi-people__name {display:block; font-weight:500; font-size:.87rem; color:#1d354c;}
+.pi-people__aff {display:block; font-size:.75rem; color:#748598; margin-top:.05rem;}
+.pi-people__pending {font:400 italic .78rem/1.5 var(--body); color:#8393a0;}
+
+.pi-agenda__item--featured .pi-agenda__track:after {width:9px;height:9px;top:1.55rem; background:#9b5d42;border-color:#9b5d42;}
+.pi-feature { background:#fbf7f3; border-left:2px solid #b87a58; padding:1.25rem 1.6rem 1.5rem; }
+.pi-feature__label {font:500 .7rem/1.5 var(--body); letter-spacing:.11em;text-transform:uppercase;color:#8d543c;margin:0 0 .7rem;}
+.pi-feature h3 {font:400 clamp(1.45rem,2.5vw,1.93rem)/1.2 var(--display);letter-spacing:-.015em;color:#503222;margin:0 0 .8rem;max-width:39ch;}
+.pi-feature__speaker {font:500 .88rem/1.4 var(--body);color:#785340;margin:0;}
+
+.pi-prev-next { display:flex; justify-content:space-between; gap:2rem; margin-top:3.1rem; padding-top:1.15rem; border-top:1px solid #dce5ec; }
+.pi-prev-next a { display:block; color:#001c48; text-decoration:none; font-size:.91rem; border-bottom:1px solid transparent; }
+.pi-prev-next a:hover {border-bottom-color:#001c48;}
+.pi-prev-next a:last-child { margin-left:auto; text-align:right; }
+.pi-prev-next small { display:block; color:#8292a2; font:400 .73rem/1.6 var(--body); }
+.pi-endnote {color:#728497; font:400 .79rem/1.7 var(--body);border-top:1px solid #dce5ec;padding-top:1.6rem;margin:2.3rem 0 0;max-width:none;}
+
+@media (max-width:850px) {
+  .pi-session__cols {grid-template-columns:1fr;gap:1.5rem;}
+  .pi-session__speakers {border-left:0; border-top:1px solid #d9e3eb; padding:1.2rem 0 0;}
+  .pi-people {grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem 1.2rem;}
+}
+@media (max-width:600px) {
+  .pi-timeline {top:64px;}
+  .pi-timeline__rail::before{top:16px;}
+  .pi-day-link {padding:10px 1px 9px;}
+  .pi-day-link__dot {width:12px;height:12px;margin:0 0 8px;}
+  .pi-day-link__date {font-size:.78rem;}
+  .pi-day-link__sub{display:none;}
+  .pi-hero__facts span + span:before {margin-right:.7rem;}
+  .pi-hero__facts {gap:.3rem 1rem;}
+  .pi-day__head {grid-template-columns:70px minmax(0,1fr);gap:1.2rem;margin-bottom:1.9rem;}
+  .pi-day__calendar{padding-right:.8rem;}
+  .pi-day__num {font-size:3.4rem;}
+  .pi-day__week {font-size:.63rem;}
+  .pi-day__month{font-size:.7rem;}
+  .pi-agenda__item {grid-template-columns:76px 14px minmax(0,1fr);gap:.55rem;}
+  .pi-agenda__time {font-size:.73rem;white-space:normal;line-height:1.32;padding-top:1.25rem;}
+  .pi-agenda__track:after {top:1.5rem;}
+  .pi-session {padding:1.15rem .9rem 1.3rem;}
+  .pi-sequence li {display:block; padding:.45rem 0;}
+  .pi-sequence__time{display:block;font-size:.75rem;margin-bottom:.08rem;}
+  .pi-people {grid-template-columns:1fr;gap:.75rem;}
+  .pi-feature {padding:1.15rem 1rem;}
+  .pi-annotation {margin-bottom:2.2rem; scroll-margin-top:140px;}
+}
+@media print {
+  .masthead, .pi-timeline, .pi-prev-next, .hosts, .foot {display:none !important;}
+  .program-enhanced .pi-day, .pi-day {display:block !important; break-before:page;}
+  .pi-main {padding:0;}
+  .pi-hero{padding:0 0 1rem;background:white;}
+  .pi-day__head{margin-bottom:1rem;}
+  .pi-agenda__item, .pi-session, .pi-feature{break-inside:avoid;}
+  .pi-session{background:#fff;}
+  .pi-feature{background:#fff;}
+}
 </style>
-
+<script>document.documentElement.className += " js";</script>
 </head>
-<body>
+<body class="program-interactive">
 <a class="skip" href="#main">Skip to content</a>
-  <header class="masthead">
-    <div class="wrap masthead__inner">
-      <a class="brand" href="index.html">
-        <b>Reasoning &amp; Geo-Scientific Modeling</b>
-        <span>Biosphere 2 &middot; May 15–19, 2027</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-      <nav class="nav" id="primary-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="theme.html">Theme</a>
-        <a href="program.html">Program</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="venue.html">Venue &amp; Travel</a>
-        <a href="register.html">Registration</a>
-        <a href="organizers.html">Organizers</a>
-        <a href="flyer.html">Flyer</a>
-      </nav>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="brand" href="index.html"><b>Reasoning &amp; Geo-Scientific Modeling</b><span>Biosphere 2 &middot; May 15–19, 2027</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a><a href="theme.html">Theme</a><a href="program.html" aria-current="page">Program</a>
+      <a href="speakers.html">Speakers</a><a href="venue.html">Venue &amp; Travel</a><a href="register.html">Registration</a>
+      <a href="organizers.html">Organizers</a><a href="flyer.html">Flyer</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <header class="pi-hero">
+    <div class="wrap pi-hero__inner">
+      <p class="pi-hero__eyebrow">Reasoning Symposium 2027</p>
+      <h1>Program</h1>
+      <p class="pi-hero__subtitle">Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI</p>
+      <div class="pi-hero__facts"><span>15–19 May 2027</span><span>Biosphere 2, Arizona</span><span>Scientific sessions: 17–18 May</span></div>
     </div>
   </header>
-  <main id="main">
-  <section class="hero hero--plain">
-    <div class="hero__frame" aria-hidden="true"></div>
-    <svg class="hero__truss" aria-hidden="true" focusable="false">
-  <defs>
-    <pattern id="truss" width="120" height="104" patternUnits="userSpaceOnUse">
-      <path d="M0 104 L60 0 L120 104 Z M60 0 L60 104 M0 104 L120 104 M-60 0 L0 104 M120 104 L180 0"
-            fill="none" stroke="#81D3EB" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="100%" height="100%" fill="url(#truss)"/>
-</svg>
-    <img class="hero__mark" src="assets/img/workshop-logo.webp" width="410" height="410"
-         decoding="async" alt="" aria-hidden="true">
-    <div class="wrap hero__inner" style="padding-block:clamp(3rem,7vw,4.5rem) clamp(2.25rem,5vw,3rem)">
-      <h1 style="font-size:clamp(2rem,4.2vw,3.2rem);max-width:20ch">Program</h1>
-    </div>
-  </section>
-  <section class="section section--tight">
-    <div class="wrap">
-    <section class="day">
-      <div class="day__head">
-        <span class="day__date">Saturday, May 15</span>
-        <h2 class="day__name">Tucson</h2>
-        <span class="day__where">University of Arizona &amp; Hoshin&rsquo;s home</span>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">08:00 – 17:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Arrival in Tucson, visits to the HAS department</p>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--hvg reveal">
-        <div class="slot__time">17:00 – 19:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Informal get-together with HAS faculty, staff and students</p>
-        <p class="slot__meta">At Hoshin&rsquo;s home</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:120"></span><span class="bar__label">120 min</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="day">
-      <div class="day__head">
-        <span class="day__date">Sunday, May 16</span>
-        <h2 class="day__name">Transfer &amp; arrival</h2>
-        <span class="day__where">Biosphere 2</span>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">13:00 – 16:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Buses from the University of Arizona to Biosphere 2</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:180"></span><span class="bar__label">180 min</span></div>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">16:00 – 18:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Tour of Biosphere 2</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:120"></span><span class="bar__label">120 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">18:00 – 20:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Dinner and socializing</p>
-        </div>
-      </div>
-    </section>
-    <section class="day">
-      <div class="day__head">
-        <span class="day__date">Monday, May 17</span>
-        <h2 class="day__name">Day one</h2>
-        <span class="day__where">Biosphere 2</span>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">07:30 – 08:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Breakfast</p>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">08:30 – 09:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Welcome and goals</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:30"></span><span class="bar__label">30 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--session s-models reveal">
-        <div class="slot__time">09:00 – 12:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Models as Support for Understanding, Reasoning &amp; Discovery</p>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">09:00 – 09:45</div>
-        <div class="slot__body">
-        <p class="slot__title">Invited keynote</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:35"></span><span class="bar__qa" style="--q:10"></span><span class="bar__label">45 min &middot; 35 presenting + 10 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--break s-models reveal">
-        <div class="slot__time">09:45 – 10:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Coffee break</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:15"></span><span class="bar__label">15 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">10:00 – 11:20</div>
-        <div class="slot__body">
-        <p class="slot__title">Four invited talks</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__qa" style="--q:20"></span><span class="bar__label">80 min &middot; 60 presenting + 20 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">11:20 – 12:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Moderated discussion</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:40"></span><span class="bar__label">40 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">12:00 – 13:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Lunch</p>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">13:00 – 14:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Poster session</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--session s-reflect reveal">
-        <div class="slot__time">14:00 – 16:30</div>
-        <div class="slot__body">
-        <p class="slot__title">The Learning Problem &mdash; Reflections on Four Decades of Systems Theory</p>
-        </div>
-      </div>
-      <div class="slot slot--sub s-reflect reveal">
-        <div class="slot__time">14:00 – 16:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Four invited talks</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:100"></span><span class="bar__qa" style="--q:20"></span><span class="bar__label">120 min &middot; 100 presenting + 20 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--break s-reflect reveal">
-        <div class="slot__time">16:00 – 16:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Coffee break</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:30"></span><span class="bar__label">30 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--session s-hvg reveal">
-        <div class="slot__time">16:30 – 17:30</div>
-        <div class="slot__body">
-        <p class="slot__title">The Learning Problem &mdash; An Information-Theoretic Perspective on the Future</p>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--hvg s-hvg reveal">
-        <div class="slot__time">16:30 – 17:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Invited presentation by Hoshin V. Gupta</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:45"></span><span class="bar__qa" style="--q:5"></span><span class="bar__label">50 min &middot; 45 presenting + 5 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">17:30 – 18:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Poster session</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">18:30 – 20:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Dinner</p>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--hvg s-hvg reveal">
-        <div class="slot__time">20:00 – 21:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Reflections and celebration of Hoshin&rsquo;s career</p>
-        <p class="slot__meta">An evening set aside to reminisce about Hoshin&rsquo;s career</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:90"></span><span class="bar__label">90 min</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="day">
-      <div class="day__head">
-        <span class="day__date">Tuesday, May 18</span>
-        <h2 class="day__name">Day two</h2>
-        <span class="day__where">Biosphere 2</span>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">08:00 – 09:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Breakfast</p>
-        </div>
-      </div>
-      <div class="slot slot--session s-models reveal">
-        <div class="slot__time">09:00 – 12:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Models as Support for Understanding, Reasoning &amp; Discovery</p>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">09:00 – 09:45</div>
-        <div class="slot__body">
-        <p class="slot__title">Invited keynote</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:35"></span><span class="bar__qa" style="--q:10"></span><span class="bar__label">45 min &middot; 35 presenting + 10 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--break s-models reveal">
-        <div class="slot__time">09:45 – 10:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Coffee break</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:15"></span><span class="bar__label">15 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">10:00 – 11:20</div>
-        <div class="slot__body">
-        <p class="slot__title">Four invited talks</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__qa" style="--q:20"></span><span class="bar__label">80 min &middot; 60 presenting + 20 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-models reveal">
-        <div class="slot__time">11:20 – 12:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Moderated discussion</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:40"></span><span class="bar__label">40 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">12:00 – 13:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Lunch</p>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">13:00 – 14:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Poster session</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--session s-future reveal">
-        <div class="slot__time">14:00 – 17:30</div>
-        <div class="slot__body">
-        <p class="slot__title">The Learning Problem &mdash; Looking to the Future</p>
-        </div>
-      </div>
-      <div class="slot slot--sub s-future reveal">
-        <div class="slot__time">14:00 – 14:45</div>
-        <div class="slot__body">
-        <p class="slot__title">Invited keynote</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:35"></span><span class="bar__qa" style="--q:10"></span><span class="bar__label">45 min &middot; 35 presenting + 10 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--break s-future reveal">
-        <div class="slot__time">14:45 – 15:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Coffee break</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:15"></span><span class="bar__label">15 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-future reveal">
-        <div class="slot__time">15:00 – 16:20</div>
-        <div class="slot__body">
-        <p class="slot__title">Four invited talks</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__qa" style="--q:20"></span><span class="bar__label">80 min &middot; 60 presenting + 20 discussion</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub slot--break s-future reveal">
-        <div class="slot__time">16:20 – 16:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Coffee break</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:10"></span><span class="bar__label">10 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--sub s-future reveal">
-        <div class="slot__time">16:30 – 17:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Moderated discussion</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">17:30 – 18:30</div>
-        <div class="slot__body">
-        <p class="slot__title">Poster session</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">18:30 – 20:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Dinner</p>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">20:00 – 21:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Extended discussion &mdash; future planning</p>
-        <div class="bar" aria-hidden="true"><span class="bar__seg" style="--m:60"></span><span class="bar__label">60 min</span></div>
-        </div>
-      </div>
-    </section>
-    <section class="day">
-      <div class="day__head">
-        <span class="day__date">Wednesday, May 19</span>
-        <h2 class="day__name">Departure</h2>
-        <span class="day__where">Biosphere 2 &rarr; Tucson</span>
-      </div>
-      <div class="slot slot--meal reveal">
-        <div class="slot__time">08:00 – 09:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Breakfast</p>
-        </div>
-      </div>
-      <div class="slot reveal">
-        <div class="slot__time">09:00 – 11:00</div>
-        <div class="slot__body">
-        <p class="slot__title">Buses from Biosphere 2 to the University of Arizona</p>
-        <div class="bar bar--muted" aria-hidden="true"><span class="bar__seg" style="--m:120"></span><span class="bar__label">120 min</span></div>
-        </div>
-      </div>
-    </section>
-    </div>
-  </section>
 
-  </main>
-  <section class="hosts">
-    <div class="wrap hosts__inner">
-      <div class="hosts__item">
-        <p class="hosts__k">Hosted by</p>
-        <img class="hosts__has" src="assets/img/has-lockup.png" width="1216" height="235"
-             loading="lazy" decoding="async"
-             alt="University of Arizona College of Science, Department of Hydrology and Atmospheric Sciences.">
-      </div>
-      <div class="hosts__item">
-        <p class="hosts__k">Held at</p>
-        <img class="hosts__b2" src="assets/img/b2-logo.png" width="273" height="168"
-             loading="lazy" decoding="async" alt="Biosphere 2, The University of Arizona.">
-      </div>
-    </div>
-  </section>
-  <footer class="foot">
-    <div class="wrap">
-      <div class="foot__grid">
-        <div>
-          <p style="color:var(--on-dark);margin:0 0 .5rem">Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI</p>
-          <p style="margin:0">May 15–19, 2027<br>Biosphere 2, Oracle, Arizona</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul><li><a href="theme.html">Theme</a></li><li><a href="program.html">Program</a></li><li><a href="speakers.html">Speakers</a></li><li><a href="venue.html">Venue &amp; Travel</a></li><li><a href="register.html">Registration</a></li><li><a href="organizers.html">Organizers</a></li></ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:has-reasoning@arizona.edu">has-reasoning@arizona.edu</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="foot__base">
-        <p>Hosted by the Department of Hydrology &amp; Atmospheric Sciences, University of Arizona.</p>
-        <p>In honor of Professor Hoshin V. Gupta.</p>
+  <nav class="pi-timeline" aria-label="Program dates">
+    <div class="wrap pi-timeline__container">
+      <div class="pi-timeline__rail" id="pi-date-rail">
+        <a class="pi-day-link" href="#may-15" data-day-target="may-15" >
+          <span class="pi-day-link__dot" aria-hidden="true"></span>
+          <span class="pi-day-link__date">Sat 15</span>
+          <span class="pi-day-link__sub">Arrival</span>
+        </a>
+        <a class="pi-day-link" href="#may-16" data-day-target="may-16" >
+          <span class="pi-day-link__dot" aria-hidden="true"></span>
+          <span class="pi-day-link__date">Sun 16</span>
+          <span class="pi-day-link__sub">Biosphere 2</span>
+        </a>
+        <a class="pi-day-link is-current" href="#may-17" data-day-target="may-17" aria-current="date">
+          <span class="pi-day-link__dot" aria-hidden="true"></span>
+          <span class="pi-day-link__date">Mon 17</span>
+          <span class="pi-day-link__sub">Symposium I</span>
+        </a>
+        <a class="pi-day-link" href="#may-18" data-day-target="may-18" >
+          <span class="pi-day-link__dot" aria-hidden="true"></span>
+          <span class="pi-day-link__date">Tue 18</span>
+          <span class="pi-day-link__sub">Symposium II</span>
+        </a>
+        <a class="pi-day-link" href="#may-19" data-day-target="may-19" >
+          <span class="pi-day-link__dot" aria-hidden="true"></span>
+          <span class="pi-day-link__date">Wed 19</span>
+          <span class="pi-day-link__sub">Departure</span>
+        </a>
       </div>
     </div>
-  </footer>
-  <script src="assets/js/site.js"></script>
+  </nav>
+
+  <div class="pi-main">
+    <div class="wrap pi-main__inner">
+      <div class="pi-annotation">
+        <p>All times are Arizona local time (MST, UTC−7). Program subject to change.</p>
+        <a href="speakers.html">Invited speakers and affiliations</a>
+      </div>
+      <p id="pi-live-region" class="skip" aria-live="polite" aria-atomic="true"></p>
+      <section class="pi-day" id="may-15" aria-labelledby="heading-may-15" data-day-panel>
+        <header class="pi-day__head">
+          <div class="pi-day__calendar" aria-hidden="true"><span class="pi-day__week">Saturday</span><span class="pi-day__num">15</span><span class="pi-day__month">May 2027</span></div>
+          <div class="pi-day__intro"><p class="pi-day__intro-kicker">Saturday, May 15</p><h2 id="heading-may-15">Arrival in Tucson</h2><p class="pi-day__place">University of Arizona &amp; Tucson</p></div>
+        </header>
+        <ol class="pi-agenda" aria-label="Saturday schedule">
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">08:00–17:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Arrival in Tucson; visits to the Department of Hydrology and Atmospheric Sciences</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--special">
+            <div class="pi-agenda__time">17:00–19:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Informal gathering with HAS faculty, staff, and students</p><p class="pi-simple__note">At Hoshin’s home</p></div>
+          </li>
+        </ol>
+        <nav class="pi-prev-next" aria-label="Adjacent dates">
+<a href="#may-16" data-day-target="may-16"><small>Next day</small>Sunday, May 16</a>        </nav>
+      </section>
+      <section class="pi-day" id="may-16" aria-labelledby="heading-may-16" data-day-panel>
+        <header class="pi-day__head">
+          <div class="pi-day__calendar" aria-hidden="true"><span class="pi-day__week">Sunday</span><span class="pi-day__num">16</span><span class="pi-day__month">May 2027</span></div>
+          <div class="pi-day__intro"><p class="pi-day__intro-kicker">Sunday, May 16</p><h2 id="heading-may-16">Arrival at Biosphere 2</h2><p class="pi-day__place">University of Arizona → Biosphere 2</p></div>
+        </header>
+        <ol class="pi-agenda" aria-label="Sunday schedule">
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">13:00–16:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Bus transfers from the University of Arizona to Biosphere 2</p></div>
+          </li>
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">16:00–18:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Tour of Biosphere 2</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">18:00–20:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Dinner and socializing</p></div>
+          </li>
+        </ol>
+        <nav class="pi-prev-next" aria-label="Adjacent dates">
+<a href="#may-15" data-day-target="may-15"><small>Previous day</small>Saturday, May 15</a><a href="#may-17" data-day-target="may-17"><small>Next day</small>Monday, May 17</a>        </nav>
+      </section>
+      <section class="pi-day is-current" id="may-17" aria-labelledby="heading-may-17" data-day-panel>
+        <header class="pi-day__head">
+          <div class="pi-day__calendar" aria-hidden="true"><span class="pi-day__week">Monday</span><span class="pi-day__num">17</span><span class="pi-day__month">May 2027</span></div>
+          <div class="pi-day__intro"><p class="pi-day__intro-kicker">Monday, May 17</p><h2 id="heading-may-17">Scientific program · Day I</h2><p class="pi-day__place">Biosphere 2</p></div>
+        </header>
+        <ol class="pi-agenda" aria-label="Monday schedule">
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">07:30–08:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Breakfast</p></div>
+          </li>
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">08:30–09:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Welcome and symposium goals</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--session">
+            <div class="pi-agenda__time">09:00–12:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <section class="pi-agenda__body" aria-labelledby="session-17-01">
+              <div class="pi-session"><p class="pi-session__number">Scientific session 01</p>
+                <h3 id="session-17-01">Models as Support for Understanding, Reasoning &amp; Discovery</h3>
+                <div class="pi-session__cols">
+                  <div><h4>Session schedule</h4><ol class="pi-sequence">
+                    <li><span class="pi-sequence__time">09:00–09:45</span><span class="pi-sequence__title">Invited keynote</span></li>
+                    <li class="is-break"><span class="pi-sequence__time">09:45–10:00</span><span class="pi-sequence__title">Coffee break</span></li>
+                    <li><span class="pi-sequence__time">10:00–11:20</span><span class="pi-sequence__title">Four invited talks</span></li>
+                    <li><span class="pi-sequence__time">11:20–12:00</span><span class="pi-sequence__title">Moderated discussion</span></li>
+                  </ol></div>
+                  <div class="pi-session__speakers"><h4>Invited speakers</h4><ul class="pi-people">
+<li><span class="pi-people__name">Thorsten Wagener</span><span class="pi-people__aff">University of Potsdam, Germany</span></li><li><span class="pi-people__name">Jasper Vrugt</span><span class="pi-people__aff">University of California, Irvine</span></li><li><span class="pi-people__name">Gab Abramowitz</span><span class="pi-people__aff">University of New South Wales, Australia</span></li><li><span class="pi-people__name">Uwe Ehret</span><span class="pi-people__aff">Karlsruhe Institute of Technology, Germany</span></li><li class="pi-people__pending">One additional speaker to be confirmed</li>                  </ul></div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">12:00–13:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Lunch</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--poster">
+            <div class="pi-agenda__time">13:00–14:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Poster session</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--session">
+            <div class="pi-agenda__time">14:00–16:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <section class="pi-agenda__body" aria-labelledby="session-17-02">
+              <div class="pi-session"><p class="pi-session__number">Scientific session 02</p>
+                <h3 id="session-17-02">The Learning Problem — Reflections on Four Decades of Systems Theory</h3>
+                <div class="pi-session__cols">
+                  <div><h4>Session schedule</h4><ol class="pi-sequence">
+                    <li><span class="pi-sequence__time">14:00–16:00</span><span class="pi-sequence__title">Four invited talks</span></li>
+                    <li class="is-break"><span class="pi-sequence__time">16:00–16:30</span><span class="pi-sequence__title">Coffee break</span></li>
+                  </ol></div>
+                  <div class="pi-session__speakers"><h4>Invited speakers</h4><ul class="pi-people">
+<li><span class="pi-people__name">Kuolin Hsu</span><span class="pi-people__aff">University of California, Irvine</span></li><li><span class="pi-people__name">Harald Kling</span><span class="pi-people__aff">AFRY, Austria</span></li><li><span class="pi-people__name">Grey Nearing</span><span class="pi-people__aff">Google</span></li><li class="pi-people__pending">One additional speaker to be confirmed</li>                  </ul></div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--featured">
+            <div class="pi-agenda__time">16:30–17:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <section class="pi-agenda__body" aria-label="Special presentation by Hoshin V. Gupta"><div class="pi-feature">
+              <p class="pi-feature__label">Special presentation · Honoree</p><h3>The Learning Problem — An Information-Theoretic Perspective on the Future</h3>
+              <p class="pi-feature__speaker">Hoshin V. Gupta · University of Arizona</p>
+            </div></section>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--poster">
+            <div class="pi-agenda__time">17:30–18:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Poster session</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">18:30–20:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Dinner</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--special">
+            <div class="pi-agenda__time">20:00–21:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Reflections and celebration of Hoshin’s career</p><p class="pi-simple__note">An evening of personal and scientific reflections</p></div>
+          </li>
+        </ol>
+        <nav class="pi-prev-next" aria-label="Adjacent dates">
+<a href="#may-16" data-day-target="may-16"><small>Previous day</small>Sunday, May 16</a><a href="#may-18" data-day-target="may-18"><small>Next day</small>Tuesday, May 18</a>        </nav>
+      </section>
+      <section class="pi-day" id="may-18" aria-labelledby="heading-may-18" data-day-panel>
+        <header class="pi-day__head">
+          <div class="pi-day__calendar" aria-hidden="true"><span class="pi-day__week">Tuesday</span><span class="pi-day__num">18</span><span class="pi-day__month">May 2027</span></div>
+          <div class="pi-day__intro"><p class="pi-day__intro-kicker">Tuesday, May 18</p><h2 id="heading-may-18">Scientific program · Day II</h2><p class="pi-day__place">Biosphere 2</p></div>
+        </header>
+        <ol class="pi-agenda" aria-label="Tuesday schedule">
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">08:00–09:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Breakfast</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--session">
+            <div class="pi-agenda__time">09:00–12:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <section class="pi-agenda__body" aria-labelledby="session-18-03">
+              <div class="pi-session"><p class="pi-session__number">Scientific session 03</p>
+                <h3 id="session-18-03">Models as Support for Understanding, Reasoning &amp; Discovery</h3>
+                <div class="pi-session__cols">
+                  <div><h4>Session schedule</h4><ol class="pi-sequence">
+                    <li><span class="pi-sequence__time">09:00–09:45</span><span class="pi-sequence__title">Invited keynote</span></li>
+                    <li class="is-break"><span class="pi-sequence__time">09:45–10:00</span><span class="pi-sequence__title">Coffee break</span></li>
+                    <li><span class="pi-sequence__time">10:00–11:20</span><span class="pi-sequence__title">Four invited talks</span></li>
+                    <li><span class="pi-sequence__time">11:20–12:00</span><span class="pi-sequence__title">Moderated discussion</span></li>
+                  </ol></div>
+                  <div class="pi-session__speakers"><h4>Invited speakers</h4><ul class="pi-people">
+<li><span class="pi-people__name">Martyn Clark</span><span class="pi-people__aff">University of Calgary, Canada</span></li><li><span class="pi-people__name">Jonathan Frame</span><span class="pi-people__aff">University of Alabama</span></li><li><span class="pi-people__name">Andrew Bennett</span><span class="pi-people__aff">University of Arizona</span></li><li><span class="pi-people__name">Laura Condon</span><span class="pi-people__aff">University of Arizona</span></li><li><span class="pi-people__name">Bo Guo</span><span class="pi-people__aff">University of Arizona</span></li>                  </ul></div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">12:00–13:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Lunch</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--poster">
+            <div class="pi-agenda__time">13:00–14:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Poster session</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--session">
+            <div class="pi-agenda__time">14:00–17:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <section class="pi-agenda__body" aria-labelledby="session-18-04">
+              <div class="pi-session"><p class="pi-session__number">Scientific session 04</p>
+                <h3 id="session-18-04">The Learning Problem — Looking to the Future</h3>
+                <div class="pi-session__cols">
+                  <div><h4>Session schedule</h4><ol class="pi-sequence">
+                    <li><span class="pi-sequence__time">14:00–14:45</span><span class="pi-sequence__title">Invited keynote</span></li>
+                    <li class="is-break"><span class="pi-sequence__time">14:45–15:00</span><span class="pi-sequence__title">Coffee break</span></li>
+                    <li><span class="pi-sequence__time">15:00–16:20</span><span class="pi-sequence__title">Four invited talks</span></li>
+                    <li class="is-break"><span class="pi-sequence__time">16:20–16:30</span><span class="pi-sequence__title">Coffee break</span></li>
+                    <li><span class="pi-sequence__time">16:30–17:30</span><span class="pi-sequence__title">Moderated discussion</span></li>
+                  </ol></div>
+                  <div class="pi-session__speakers"><h4>Invited speakers</h4><ul class="pi-people">
+<li><span class="pi-people__name">Karsten Schulz</span><span class="pi-people__aff">BOKU, Austria</span></li><li><span class="pi-people__name">Hernan Moreno</span><span class="pi-people__aff">University of Texas at El Paso</span></li><li><span class="pi-people__name">Yang Yang</span><span class="pi-people__aff">University of Massachusetts Boston</span></li><li><span class="pi-people__name">Yang Hong</span><span class="pi-people__aff">University of Oklahoma</span></li><li><span class="pi-people__name">Praveen Kumar</span><span class="pi-people__aff">University of Illinois</span></li>                  </ul></div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--poster">
+            <div class="pi-agenda__time">17:30–18:30</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Poster session</p></div>
+          </li>
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">18:30–20:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Dinner</p></div>
+          </li>
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">20:00–21:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Extended discussion — future planning</p></div>
+          </li>
+        </ol>
+        <nav class="pi-prev-next" aria-label="Adjacent dates">
+<a href="#may-17" data-day-target="may-17"><small>Previous day</small>Monday, May 17</a><a href="#may-19" data-day-target="may-19"><small>Next day</small>Wednesday, May 19</a>        </nav>
+      </section>
+      <section class="pi-day" id="may-19" aria-labelledby="heading-may-19" data-day-panel>
+        <header class="pi-day__head">
+          <div class="pi-day__calendar" aria-hidden="true"><span class="pi-day__week">Wednesday</span><span class="pi-day__num">19</span><span class="pi-day__month">May 2027</span></div>
+          <div class="pi-day__intro"><p class="pi-day__intro-kicker">Wednesday, May 19</p><h2 id="heading-may-19">Departure</h2><p class="pi-day__place">Biosphere 2 → Tucson</p></div>
+        </header>
+        <ol class="pi-agenda" aria-label="Wednesday schedule">
+          <li class="pi-agenda__item pi-agenda__item--muted">
+            <div class="pi-agenda__time">08:00–09:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Breakfast</p></div>
+          </li>
+          <li class="pi-agenda__item">
+            <div class="pi-agenda__time">09:00–11:00</div><div class="pi-agenda__track" aria-hidden="true"></div>
+            <div class="pi-agenda__body"><p class="pi-simple__title">Bus transfers from Biosphere 2 to the University of Arizona</p></div>
+          </li>
+        </ol>
+        <nav class="pi-prev-next" aria-label="Adjacent dates">
+<a href="#may-18" data-day-target="may-18"><small>Previous day</small>Tuesday, May 18</a>        </nav>
+      </section>
+      <p class="pi-endnote">Invited speakers are shown by scientific session, consistent with the current speakers list. Individual talk titles, keynote assignments, and presentation order have not yet been announced.</p>
+    </div>
+  </div>
+</main>
+
+<section class="hosts">
+  <div class="wrap hosts__inner">
+    <div class="hosts__item"><p class="hosts__k">Hosted by</p><img class="hosts__has" src="assets/img/has-lockup.png" width="1216" height="235" loading="lazy" decoding="async" alt="University of Arizona College of Science, Department of Hydrology and Atmospheric Sciences."></div>
+    <div class="hosts__item"><p class="hosts__k">Held at</p><img class="hosts__b2" src="assets/img/b2-logo.png" width="273" height="168" loading="lazy" decoding="async" alt="Biosphere 2, The University of Arizona."></div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div><p style="color:var(--on-dark);margin:0 0 .5rem">Reasoning as the Basis for Geo-Scientific Modeling in the Age of AI</p><p style="margin:0">May 15–19, 2027<br>Biosphere 2, Oracle, Arizona</p></div>
+      <div><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="theme.html">Theme</a></li><li><a href="program.html">Program</a></li><li><a href="speakers.html">Speakers</a></li><li><a href="venue.html">Venue &amp; Travel</a></li><li><a href="register.html">Registration</a></li><li><a href="organizers.html">Organizers</a></li><li><a href="flyer.html">Flyer</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:has-reasoning@arizona.edu">has-reasoning@arizona.edu</a></li></ul></div>
+    </div>
+    <div class="foot__base"><p>Hosted by the Department of Hydrology &amp; Atmospheric Sciences, University of Arizona.</p><p>In honor of Professor Hoshin V. Gupta.</p></div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script>
+/* Progressive enhancement: without JavaScript, all five days remain readable
+   and the date links work as ordinary in-page anchors. */
+(function () {
+  'use strict';
+  const rail = document.getElementById('pi-date-rail');
+  const panels = Array.from(document.querySelectorAll('[data-day-panel]'));
+  const dateLinks = Array.from(rail.querySelectorAll('[data-day-target]'));
+  const allLinks = Array.from(document.querySelectorAll('a[data-day-target]'));
+  const available = new Set(panels.map(p => p.id));
+  const region = document.getElementById('pi-live-region');
+  if (!rail || !panels.length) return;
+
+  document.documentElement.classList.add('program-enhanced');
+  rail.setAttribute('role', 'tablist');
+  rail.setAttribute('aria-label', 'Choose a day');
+  dateLinks.forEach(link => {
+    link.setAttribute('role', 'tab');
+    link.setAttribute('aria-controls', link.dataset.dayTarget);
+  });
+  panels.forEach(panel => {panel.setAttribute('role', 'tabpanel');panel.setAttribute('tabindex', '0');});
+
+  function activate(id, push, scroll) {
+    if (!available.has(id)) return;
+    panels.forEach(panel => {
+      const chosen = panel.id === id;
+      panel.classList.toggle('is-current', chosen);
+      panel.setAttribute('aria-hidden', String(!chosen));
+    });
+    dateLinks.forEach(link => {
+      const chosen = link.dataset.dayTarget === id;
+      link.classList.toggle('is-current', chosen);
+      link.setAttribute('aria-selected', String(chosen));
+      link.setAttribute('tabindex', chosen ? '0' : '-1');
+      if (chosen) link.setAttribute('aria-current', 'date');
+      else link.removeAttribute('aria-current');
+    });
+    const heading = document.getElementById('heading-' + id);
+    if (region && heading) region.textContent = 'Showing ' + heading.textContent.trim();
+    if (push && location.hash !== '#' + id) history.pushState(null, '', '#' + id);
+    if (scroll) {
+      document.querySelector('.pi-annotation').scrollIntoView({behavior:'auto', block:'start'});
+    }
+  }
+  allLinks.forEach(link => link.addEventListener('click', function(event) {
+    event.preventDefault();
+    activate(this.dataset.dayTarget, true, true);
+  }));
+  rail.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    const idx = dateLinks.indexOf(document.activeElement);
+    if (idx < 0) return;
+    event.preventDefault();
+    let next = idx;
+    if (event.key === 'ArrowRight') next = (idx+1)%dateLinks.length;
+    if (event.key === 'ArrowLeft') next = (idx-1+dateLinks.length)%dateLinks.length;
+    if (event.key === 'Home') next = 0;
+    if (event.key === 'End') next = dateLinks.length-1;
+    dateLinks[next].focus();
+    activate(dateLinks[next].dataset.dayTarget, true, false);
+  });
+  function fromLocation() {return available.has(location.hash.substring(1)) ? location.hash.substring(1) : 'may-17';}
+  window.addEventListener('popstate', () => activate(fromLocation(),false,false));
+  window.addEventListener('hashchange', () => activate(fromLocation(),false,false));
+  activate(fromLocation(),false,false);
+})();
+</script>
 </body>
 </html>
