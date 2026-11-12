@@ -1366,3 +1366,21 @@ h1, h2, h3, h4 {
 .home-page .section--dark .card__tag {
   color: #81D3EB;
 }
+
+
+/* Student organizing team */
+.roster--students {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .roster--students {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .roster--students {
+    grid-template-columns: 1fr;
+  }
+}
