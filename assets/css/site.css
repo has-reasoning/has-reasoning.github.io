@@ -1384,3 +1384,46 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================
+   ORGANIZING COMMITTEE — UNIFIED PORTRAITS
+   ========================================= */
+
+/* Faculty and student photo grids */
+.roster--faculty,
+.roster--faculty.roster--students {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Identical photo proportions */
+.roster--faculty .roster__photo,
+.roster--students .roster__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: center 30%;
+  margin-bottom: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .roster--faculty,
+  .roster--faculty.roster--students {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .roster--faculty,
+  .roster--faculty.roster--students {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
